@@ -56,7 +56,7 @@ const SignUp: React.FC = () => {
             backgroundSize: 'cover'
           }}
         ></Box>
-        <Grid container justifyContent={'center'} sx={{ flex: '50%'}}>
+        <Grid container gap={2} justifyContent={'center'} sx={{ flex: '50%'}} style={{flexDirection:'column', alignItems:'center'}}>
           <Box
             style={{
               display: 'flex',
@@ -70,18 +70,15 @@ const SignUp: React.FC = () => {
           >
             {<GppGoodIcon style={{ fontSize: '3.8rem', fill: 'white', width: 'none', height: 'none' }} />}
           </Box>
-          <Grid item xs={12}>
             <Typography variant="h4">SignUp</Typography>
-          </Grid>
-
-          <Grid item xs={6}>
+          
             <Box>
               <Grid container spacing={2}>
                 <Grid item xs={12}>
                   <TextField
                     value={email}
                     onChange={(ev) => setEmail(ev.target.value)}
-                    fullWidth
+                    style={{width:400}}
                     id="email"
                     label="E-mail*"
                     type="text"
@@ -92,7 +89,7 @@ const SignUp: React.FC = () => {
                   <TextField
                     value={password}
                     onChange={(ev) => setPassword(ev.target.value)}
-                    fullWidth
+                    style={{width:400}}
                     id="password"
                     label="Password*"
                     type="password"
@@ -103,7 +100,7 @@ const SignUp: React.FC = () => {
                   <TextField
                     value={repeatPassword}
                     onChange={(ev) => setRepeatPassword(ev.target.value)}
-                    fullWidth
+                    style={{width:400}}
                     id="repeatPassword"
                     label="Repeat password*"
                     type="password"
@@ -111,7 +108,7 @@ const SignUp: React.FC = () => {
                   />
                 </Grid>
                 <Grid item xs={12}>
-                  <Button variant="contained" onClick={createUser} fullWidth>
+                  <Button variant="contained" onClick={createUser}style={{width:400}}>
                     Cadastrar
                   </Button>
                 </Grid>
@@ -123,7 +120,6 @@ const SignUp: React.FC = () => {
               </Grid>
             </Box>
           </Grid>
-        </Grid>
       </Box>
     </>
   );
